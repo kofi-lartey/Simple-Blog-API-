@@ -7,7 +7,6 @@ export const postRoute = Router();
 
 postRoute.get('/posts',allPost)
 postRoute.get('/posts/:id',aPost)
-postRoute.post('/posts',post)
 postRoute.post('/posts',authenticate,post)
 postRoute.put('/posts/:id',authenticate,updatePost)
 postRoute.delete('/posts/:id',authenticate,delPost)
