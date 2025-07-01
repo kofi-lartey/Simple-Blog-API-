@@ -1,0 +1,33 @@
+{
+  "name": "simple-blog-api-",
+  "version": "1.0.0",
+  "description": "Simple Blog API to create,  read, update, and delete blog posts, and which includes a simple authentication mechanism for creating and  updating posts.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index,js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kofi-lartey/Simple-Blog-API-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kofi-lartey/Simple-Blog-API-/issues"
+  },
+  "homepage": "https://github.com/kofi-lartey/Simple-Blog-API-#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.1",
+    "nodemon": "^3.1.10",
+    "normalize-mongoose": "^1.0.0"
+  }
+}
