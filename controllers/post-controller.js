@@ -1,10 +1,11 @@
 import { Post } from "../models/post-model.js"
+import { postSchema } from "../schema/postSchema.js"
 
 // creating a new post
 export const post = async (req, res) => {
     try {
         // validate
-        const { error, value } = Post.validate(req.body)
+        const { error, value } = postSchema.validate(req.body)
         if (error) {
             return res.status(400).json({ message: error.details[0].message })
         }
@@ -69,7 +70,7 @@ export const updatePost = async (req, res) => {
         }
         // update the existing body with this new ones
         const postUpdate = await Post.findByIdAndUpdate(
-            {id: postID, user: userID},
+            {_id: postID, user: userID},
             req.body,
             {new: true}
         );
