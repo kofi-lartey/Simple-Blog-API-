@@ -1,17 +1,21 @@
  📝 Blog API
 This is a simple blog backend API built with Node.js, Express, and MongoDB. It supports user registration, login, and CRUD operations for blog posts.
 
+POSTMAN DOCUMENTATION
+https://documenter.getpostman.com/view/45653322/2sB34ZrjKu
+
 🚀 Setup Instructions
 1. Install Dependencies
-npm install 
-2. Environment Variables
+-npm install
+
+3. Environment Variables
 Create a .env file in the root directory and add your MongoDB connection URI:
 MONGODB details - Connection
 MONGO_URI=mongodb+srv://kofilartey:Pleaseyou5@cluster0.g9eai0u.mongodb.net/blog_db?retryWrites=true&w=majority&appName=Cluster0
 PORT=4060
 JWT_SECRET=your_jwt_secret_here
 
-3. Run the Server
+4. Run the Server
 npm start
 The API should now be running on http://localhost:4060.
 
