@@ -3,9 +3,6 @@ This is a simple blog backend API built with Node.js, Express, and MongoDB. It s
 
 🚀 Setup Instructions
 1. Install Dependencies
-bash
-Copy
-Edit
 npm install 
 2. Environment Variables
 Create a .env file in the root directory and add your MongoDB connection URI:
