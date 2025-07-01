@@ -124,4 +124,4 @@ Restricting Duplicate Users:
 Initially, the same username could register multiple times. This was fixed by checking for existing usernames before registration.
 
 Post Ownership Security:
-A major challenge was restricting users from creating or modifying posts using another user's ID. This was resolved by extracting the authenticated user’s ID from the JWT and comparing it to the post’s user field during protected routes like PUT and DELETE.
+A major challenge was restricting users from creating or modifying posts using another user's ID. This was resolved by extracting the authenticated user’s ID from the JWT and comparing it to the post’s user field during protected routes like PUT and DELETE but still cant solve that of the creating post.
