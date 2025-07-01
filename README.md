@@ -1,37 +1,23 @@
-# Simple-Blog-API-
-Simple Blog API to create,  read, update, and delete blog posts, and which includes a simple authentication mechanism for creating and  updating posts. 
-📝 Blog API
+ 📝 Blog API
 This is a simple blog backend API built with Node.js, Express, and MongoDB. It supports user registration, login, and CRUD operations for blog posts.
 
 🚀 Setup Instructions
-1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-2. Install Dependencies
+1. Install Dependencies
 bash
 Copy
 Edit
 npm install
+2. 
 3. Environment Variables
 Create a .env file in the root directory and add your MongoDB connection URI:
-
-env
-Copy
-Edit
+MONGODB details - Connection
 MONGO_URI=mongodb+srv://kofilartey:Pleaseyou5@cluster0.g9eai0u.mongodb.net/blog_db?retryWrites=true&w=majority&appName=Cluster0
-PORT=5000
+PORT=4060
 JWT_SECRET=your_jwt_secret_here
-⚠️ Never share your .env file or sensitive credentials in public repositories.
 
-4. Run the Server
-bash
-Copy
-Edit
+5. Run the Server
 npm start
-The API should now be running on http://localhost:5000.
+The API should now be running on http://localhost:4060.
 
 📚 API Documentation
 All routes are prefixed with /api.
@@ -42,42 +28,37 @@ POST /api/register
 
 Request Body:
 
-json
-Copy
-Edit
+json-format
 {
   "username": "kofiLartey",
   "password": "1234567890"
 }
 Response:
-
-json
-Copy
-Edit
 {
-  "success": true,
-  "message": "User registered successfully"
+  "message": "Successful registration"
 }
+
 2. Login
 POST /api/login
 
 Request Body:
 
-json
-Copy
-Edit
+json- format
 {
   "username": "kofiLartey",
   "password": "1234567890"
 }
 Response:
-
-json
-Copy
-Edit
 {
-  "token": "JWT_TOKEN_HERE"
+  "message": "Token",
+  "token": "JWT_TOKEN_HERE",
+  "user": {
+    "username": "kofiLartey",
+    "password": "$2b$12$7onEjJ7zCUwIuOzjVKoEtOF7yFUR7wTCpbD.gpXIUfbdh2iS3Yqci",
+    "id": "6863e6f59bda3ea34ae00065"
+  }
 }
+
 📝 Post Routes
 🔐 Requires JWT Token in Authorization header for protected routes.
 
@@ -85,55 +66,48 @@ Edit
 GET /api/posts
 
 Response:
-
-json
-Copy
-Edit
 [
   {
     "_id": "postId1",
     "title": "First Post",
     "body": "This is a post",
-    "user": "userId"
+    "user": "userID",
   }
 ]
+
 2. Get a Single Post
 GET /api/posts/:id
+PostID - The post you want to see
 
-3. Create a Post
+4. Create a Post
 POST /api/posts
 (Protected)
 
 Headers:
-
-makefile
-Copy
-Edit
 Authorization: Bearer <JWT_TOKEN>
 Request Body:
 
-json
-Copy
-Edit
+json - format
 {
   "title": "New Post",
   "body": "Post content"
+  "user": "userID"
 }
+
 4. Update a Post
 PUT /api/posts/:id
 (Protected)
-
+PostID - The post you want to edit
 Request Body:
 
-json
-Copy
-Edit
+json-format
 {
   "title": "Updated Title",
   "body": "Updated content"
 }
 5. Delete a Post
 DELETE /api/posts/:id
+PostID - The post you want to delete
 (Protected)
 
 ✅ Assumptions Made
