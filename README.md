@@ -3,19 +3,15 @@ This is a simple blog backend API built with Node.js, Express, and MongoDB. It s
 
 🚀 Setup Instructions
 1. Install Dependencies
-bash
-Copy
-Edit
-npm install
-2. 
-3. Environment Variables
+npm install 
+2. Environment Variables
 Create a .env file in the root directory and add your MongoDB connection URI:
 MONGODB details - Connection
 MONGO_URI=mongodb+srv://kofilartey:Pleaseyou5@cluster0.g9eai0u.mongodb.net/blog_db?retryWrites=true&w=majority&appName=Cluster0
 PORT=4060
 JWT_SECRET=your_jwt_secret_here
 
-5. Run the Server
+3. Run the Server
 npm start
 The API should now be running on http://localhost:4060.
 
@@ -79,7 +75,7 @@ Response:
 GET /api/posts/:id
 PostID - The post you want to see
 
-4. Create a Post
+3. Create a Post
 POST /api/posts
 (Protected)
 
