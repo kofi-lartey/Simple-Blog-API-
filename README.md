@@ -11,7 +11,7 @@ https://documenter.getpostman.com/view/45653322/2sB34ZrjKu
 3. Environment Variables
 Create a .env file in the root directory and add your MongoDB connection URI:
 MONGODB details - Connection
-MONGO_URI=mongodb+srv://kofilartey:Pleaseyou5@cluster0.g9eai0u.mongodb.net/blog_db?retryWrites=true&w=majority&appName=Cluster0
+MONGO_URI=mongodb+srv://username:password/blog_db?retryWrites=true&w=majority&appName=Cluster0
 PORT=4060
 JWT_SECRET=your_jwt_secret_here
 
